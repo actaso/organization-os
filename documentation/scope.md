@@ -12,7 +12,7 @@
   * **Title** (string)
   * **Purpose** (string)
   * **Accountabilities** (array of strings)
-  * **Assignee** (free-text string)
+  * **Assignee** (simple text input for MVP)
 * Provide a set of 5–10 starter role templates for quick onboarding.
 * Allow generation of a read-only "view link" for stakeholders.
 * Persist data in Firestore; secure via NextAuth.
@@ -33,7 +33,7 @@
 * **Performance**: Canvas operations remain smooth up to 50 roles.
 * **Scalability**: Firestore schema optimized for quick fetch/update.
 * **Maintainability**: Clean code structure, well-documented, unit/E2E tests.
-* **Security**: User data protected by NextAuth; view links use random tokens.
+* **Security**: User data protected by Google OAuth; view links use simple public tokens.
 * **Deployment**: Automated CI pipeline on Vercel for preview & prod.
 
 ### 5. Data Model (Firestore)
@@ -72,7 +72,7 @@ shares/{shareId} {
 * **UI**: React + Tailwind CSS + shadcn/ui
 * **Canvas**: React Flow
 * **Data Fetching**: TanStack Query
-* **Auth**: NextAuth.js (email magic links)
+* **Auth**: Google OAuth (via NextAuth.js or Clerk)
 * **Database**: Firestore
 * **State**: Local canvas state + React Context for selection, React Flow handles layout
 * **API**: Next.js API Routes with CRUD for roles & share tokens
@@ -81,7 +81,7 @@ shares/{shareId} {
 
 ### 7. Deliverables & Acceptance Criteria
 
-1. **Auth Setup**: NextAuth configured; protected dashboard route.
+1. **Auth Setup**: Google OAuth configured; protected dashboard route.
 2. **Firestore Integration**: Role data CRUD endpoints; TanStack Query hooks.
 3. **Canvas UI**: React Flow with custom `RoleNode`; pan/zoom; drag-&-drop.
 4. **Role Form**: Modal for create/edit; binds to API via React Query.

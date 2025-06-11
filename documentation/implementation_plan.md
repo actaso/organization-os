@@ -6,8 +6,8 @@
 
   * Scaffold Next.js project with App Router
   * Integrate Tailwind + shadcn/ui
-  * Configure NextAuth (email) and Firestore SDK
-  * Create `/api/auth` and basic `AuthWrapper`
+  * Configure Google OAuth authentication and Firestore SDK
+  * Create authentication wrapper and protected routes
 * **Week 2**:
 
   * Define Firestore schema
